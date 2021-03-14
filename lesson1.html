@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let gradCels = prompt("Введите градусы по Цельсию");
+        let gradFar = (9 / 5) * gradCels + 32;
+        alert(gradCels + " градусов по Цельсию будет равно " + gradFar + " градуса по Фаренгейту");
+    </script>
+    <script>
+        let name = "Василий";
+        let admin = name;
+        alert(admin);
+        console.log(admin);
+    </script>
+    <script>
+        /*
+        1. 10 + 10 = 20
+        2. 20 + "10" = "2010"
+        3. с помощью console.log выводим результат в консоль
+        */
+        let result = 10 + 10 + "10";
+        console.log(result);
+        /*
+        1. 10 + "10" = "1010"
+        2. "1010" + 10 = "101010"
+        */
+        result = 10 + "10" + 10;
+        console.log(result);
+        /*
+        1. 10 + 10 = 20
+        2. 20 + +"10" = 30 (знак "+" перед строкой преобразует тип строки в число)
+        */
+        result = 10 + 10 + +"10";
+        console.log(result);
+        /*
+        1. -"" = -0
+        2. 10 / -0 = -Infinity (минус бесконечность)
+        */
+        result = 10 / -"";
+        console.log(result);
+        /*
+        1. 2,5 - не число, так как указано не через точку, а запятую
+        2. 10 / не число = NaN (не число)
+        */
+        result = 10 / +"2,5";
+        console.log(result);
+    </script>
+</body>
+
+</html>
