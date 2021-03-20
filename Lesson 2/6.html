@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        let sum = prompt("Введите сумму, которую хотите положить на счет");
+        function rub(sum) {
+            if (sum > 4 && sum < 21) {
+                return " рублей";
+            }
+            if (sum == 1 || sum.charAt(sum.length - 1) == 1) {
+                return " рубль";
+            }
+            if (sum == 2 || sum == 3 || sum == 4 || sum[sum.length - 1] == 2 || sum[sum.length - 1] == 3 || sum[sum.length - 1] == 4) {
+                return " рубля";
+            }
+            return " рублей";
+        }
+        alert("Ваша сумма в " + sum + rub(sum) + " успешно зачислена");
+    </script>
+</body>
+
+</html>
