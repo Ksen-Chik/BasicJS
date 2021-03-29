@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        class Product {
+            constructor(name, price) {
+                this.name = name;
+                this.price = price;
+            }
+
+            make25PercentDiscount() {
+                this.price *= 0.75;
+            }
+        }
+
+        let obj1 = new Product('Тетрадь', '100');
+        let obj2 = new Product('Ручка', '10');
+        obj1.make25PercentDiscount();
+        obj2.make25PercentDiscount();
+        console.log(obj1);
+        console.log(obj2);
+    </script>
+</body>
+
+</html>
