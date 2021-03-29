@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        function numObj(n) {
+            if (isNaN(n) || !Number.isInteger(n) || n < 0) {
+                console.log('Введено некорректное значение');
+                return {};
+            }
+            let result = {};
+            result.units = n;
+            result.tens = 0;
+            result.hundreds = 0;
+            if (n > 9) {
+                result.units = n % 10;
+                result.tens = Math.floor(n / 10);
+            }
+            if (n > 99) {
+                result.units = (n % 100) % 10;
+                result.hundreds = Math.floor(n / 100);
+            }
+            return result;
+        };
+        let num = +prompt('Введите целое число от 0 до 999');
+        console.log(numObj(num));
+    </script>
+</body>
+
+</html>
